@@ -45,5 +45,10 @@ def get_location(ip):
 
 ip = input('IP: ')
 
-y = json.dumps(get_location(ip), indent=4)
-print(y)
+validate_ip__ = validate_ip(ip)
+
+if validate_ip__ == 0:
+    y = json.dumps(get_location(ip), indent=4)
+    print(y)
+else:
+    print('Invalid IP Adress!')
